@@ -38,7 +38,19 @@ def read_gun_violence() -> pd.DataFrame:
     df["ym"] = df.date.apply(lambda x: x.strftime("%Y-%m"))
     df["ymd"] = df.date.apply(lambda x: x.strftime("%Y-%m-%d"))
 
+    df["y"] = df["y"].astype("int")
+
     return df[common_cols]
+
+
+def read_state_population() -> pd.DataFrame:
+    return pd.read_csv(mu.get_full_path("data/state_population.csv"))
+
+
+def read_state_population_by_year() -> pd.DataFrame:
+    return pd.read_csv(mu.get_full_path("data/state_population_by_year_items.csv"))
+    # return pd.read_csv(mu.get_full_path("data/state_population_columns.csv"))
+
 
 
 
