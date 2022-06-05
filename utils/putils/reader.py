@@ -55,3 +55,7 @@ def read_state_population_by_year() -> pd.DataFrame:
 def read_state_totals_with_populations() -> pd.DataFrame:
     return pd.read_csv(mu.get_full_path("data/state_totals_with_populations.csv"))
 
+
+def read_gun_vs_car() -> pd.DataFrame:
+    return pd.read_csv(mu.get_full_path("data/gun_vs_car.csv"))
+
