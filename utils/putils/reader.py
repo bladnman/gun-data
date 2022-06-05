@@ -52,5 +52,6 @@ def read_state_population_by_year() -> pd.DataFrame:
     # return pd.read_csv(mu.get_full_path("data/state_population_columns.csv"))
 
 
-
+def read_state_totals_with_populations() -> pd.DataFrame:
+    return pd.read_csv(mu.get_full_path("data/state_totals_with_populations.csv"))
 
